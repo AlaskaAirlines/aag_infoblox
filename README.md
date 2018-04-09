@@ -27,6 +27,42 @@ Tested on:
 
 This resource depends on the infoblox community gem. 
 
+## Usage
+
+### View Next Available IP
+```text
+aag_infoblox 'check_ip' do
+  network '192.168.1.1/24'
+  action :view
+  username 'your username'
+  password 'your password'
+  infoblox_url 'https://infoblox.mydomain.net'
+end
+```
+### Set Next Available IP
+```text
+aag_infoblox 'set_ip' do
+  hostname ['system1.mydomain.net', 'system2.mydomain.net']
+  username 'your username'
+  password 'your password'
+  infoblox_url 'https://infoblox.mydomain.net'
+  network '192.168.1.1/24'
+  config_dns true
+  action :set
+end
+```
+### Delete IP Reservation
+```text
+aag_infoblox 'delete_ip' do
+  hostname ['system1.mydomain.net', 'system2.mydomain.net']
+  username 'your username'
+  password 'your password'
+  infoblox_url 'https://infoblox.mydomain.net'
+  network '192.168.1.1/24'
+  config_dns true
+  action :delete
+end
+```
 ## Contributing
 
 Please submit pull requests with fixes or ideas for improvement. FOSS is all about collaboration, so please join in!
