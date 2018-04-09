@@ -19,8 +19,7 @@ services: docker
 
 env:
   matrix:
-  - INSTANCE=default-centos-7
-  - INSTANCE=dnf-compat-fedora-latest
+  - INSTANCE=default-fedora-latest
 
 before_script:
   - sudo iptables -L DOCKER || ( echo "DOCKER iptables chain missing" ; sudo iptables -N DOCKER )
