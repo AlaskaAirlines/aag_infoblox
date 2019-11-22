@@ -1,3 +1,5 @@
+# All of these resources use stubbed data. Bozo the Clown is friendly and can be substituted with anything else
+
 aag_infoblox 'check_ip' do
   network '192.168.1.1/24'
   action :view
